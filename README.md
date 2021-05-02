@@ -2,6 +2,8 @@
 
 Manage the configs for each vim-plugged plugin in a separate file.
 
+![screenshot](assets/screenshot.png)
+
 ## Requirements
 
 -   [NeoVim](https://github.com/neovim/neovim)
