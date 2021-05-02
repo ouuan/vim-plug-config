@@ -26,11 +26,14 @@ call s:SetDefault("g:plug_config_vim_dir", stdpath("config") . "/plug-config")
 call s:SetDefault("g:plug_config_lua_dir", stdpath("config") . "/plug-config")
 call s:SetDefault("g:plug_config_edit_command", "edit")
 call s:SetDefault("g:plug_config_default_type", "smart")
+call s:SetDefault("g:plug_config_all_header", 'Configs for plug: {plug}')
 
 command! -nargs=1 -bar PlugConfigEdit call plug_config#edit#EditConfig(<args>)
 command! -nargs=0 -bar PlugConfigEditUnderCursor call plug_config#edit#PlugConfigEditUnderCursor()
 command! -nargs=1 -bar PlugConfigLoad call plug_config#load#LoadSingleConfig(<args>)
 command! -nargs=0 -bar PlugConfigLoadAll call plug_config#load#LoadPlugConfigs()
+command! -nargs=0 -bar PlugConfigAll call plug_config#all#ShowAll()
+command! -nargs=0 -bar PlugConfigClean call plug_config#clean#Clean()
 
 if g:plug_config_autoload
     PlugConfigLoadAll
