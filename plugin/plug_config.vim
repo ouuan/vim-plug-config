@@ -21,7 +21,6 @@ fun! s:SetDefault(variable, default)
     endif
 endf
 
-call s:SetDefault("g:plug_config_autoload", 1)
 call s:SetDefault("g:plug_config_vim_dir", stdpath("config") . "/plug-config")
 call s:SetDefault("g:plug_config_lua_dir", stdpath("config") . "/plug-config")
 call s:SetDefault("g:plug_config_edit_command", "edit")
@@ -34,7 +33,3 @@ command! -nargs=1 -bar PlugConfigLoad call plug_config#load#LoadSingleConfig(<ar
 command! -nargs=0 -bar PlugConfigLoadAll call plug_config#load#LoadPlugConfigs()
 command! -nargs=0 -bar PlugConfigAll call plug_config#all#ShowAll()
 command! -nargs=0 -bar PlugConfigClean call plug_config#clean#Clean()
-
-if g:plug_config_autoload
-    PlugConfigLoadAll
-endif

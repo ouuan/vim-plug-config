@@ -11,17 +11,23 @@ Manage the configs for each vim-plugged plugin in a separate file.
 
 ## What it does
 
--   Automatically load configs for each plugin.
+-   Load configs for each plugin in a single command.
 -   Help you manage the config files of the plugins.
 -   Supports both Vim Script and Lua config files.
 
 ## Installation
 
+In the Plug list:
+
 ```viml
 Plug 'ouuan/vim-plug-config'
 ```
 
-You'd better add this as the first plugin in your plug list to prevent setting configs for other plugins after they are loaded.
+If you want to auto-load the configs:
+
+```viml
+autocmd VimEnter * PlugConfigLoadAll
+```
 
 ## Commands
 
@@ -43,11 +49,6 @@ It's recommended to map a key to `PlugConfigEditUnderCursor` so that you can use
 ```viml
 nnoremap gp :PlugConfigEditUnderCursor<CR>
 ```
-
-### `let g:plug_config_autoload`
-
--   Default: `1`
--   Whether to auto-load all configs at startup.
 
 ### `let g:plug_config_vim_dir`
 
