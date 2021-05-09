@@ -23,7 +23,7 @@ Plug 'ouuan/vim-plug-config'
 
 You'd better add this as the first plugin in your plug list to prevent setting configs for other plugins after they are loaded.
 
-Alternatively, you can load the configs at the VimEnter event:
+Alternatively, you can load the configs on the VimEnter event:
 
 ```viml
 let g:plug_config_autoload = 0
