@@ -13,7 +13,7 @@ fun! plug_config#load#LoadSingleConfig(plug)
         exec "source " . vimPath
     endif
     if filereadable(luaPath)
-        exec "lua dofile('" . luaPath . "')"
+        exec "luafile " . luaPath
     endif
 endfun
 
